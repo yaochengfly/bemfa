@@ -2,10 +2,7 @@
 
 from typing import Final
 
-try:
-    from homeassistant.backports.enum import StrEnum
-except ImportError:
-    from enum import StrEnum
+from enum import StrEnum
 
 DOMAIN: Final = "bemfa"
 
