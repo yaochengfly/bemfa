@@ -10,13 +10,11 @@ from homeassistant.components.light import (
     ATTR_SUPPORTED_COLOR_MODES,
     DOMAIN,
     ColorMode,
+    ATTR_COLOR_TEMP_KELVIN as ATTR_COLOR_TEMP,
+    ATTR_MAX_COLOR_TEMP_KELVIN as ATTR_MAX_MIREDS,
+    ATTR_MIN_COLOR_TEMP_KELVIN as ATTR_MIN_MIREDS,
 )
-try:
-    from homeassistant.components.light import ATTR_COLOR_TEMP_KELVIN as ATTR_COLOR_TEMP, ATTR_MAX_COLOR_TEMP_KELVIN as ATTR_MAX_MIREDS, ATTR_MIN_COLOR_TEMP_KELVIN as ATTR_MIN_MIREDS
-    _IS_KELVIN = True
-except ImportError:
-    from homeassistant.components.light import ATTR_COLOR_TEMP, ATTR_MAX_MIREDS, ATTR_MIN_MIREDS
-    _IS_KELVIN = False
+_IS_KELVIN = True
 
 from homeassistant.const import SERVICE_TURN_OFF, SERVICE_TURN_ON, STATE_ON
 from homeassistant.util.read_only_dict import ReadOnlyDict
