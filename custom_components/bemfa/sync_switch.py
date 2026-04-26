@@ -9,7 +9,8 @@ STATE_IDLE = CameraState.IDLE
 from homeassistant.components.group import DOMAIN as GROUP_DOMAIN
 from homeassistant.components.humidifier import DOMAIN as HUMIDIFIER_DOMAIN
 from homeassistant.components.input_boolean import DOMAIN as INPUT_BOOLEAN_DOMAIN
-from homeassistant.components.lock import DOMAIN as LOCK_DOMAIN
+from homeassistant.components.lock import DOMAIN as LOCK_DOMAIN, LockState
+STATE_LOCKED = LockState.LOCKED
 from homeassistant.components.media_player import DOMAIN as MEDIA_PLAYER_DOMAIN
 from homeassistant.components.remote import DOMAIN as REMOTE_DOMAIN
 from homeassistant.components.scene import DOMAIN as SCENE_DOMAIN
@@ -31,7 +32,6 @@ from homeassistant.const import (
     SERVICE_TURN_ON,
     SERVICE_UNLOCK,
     SERVICE_LOCK,
-    STATE_LOCKED,
     STATE_ON,
     STATE_PLAYING,
 )
